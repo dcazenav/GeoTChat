@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="fr">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</head>
+<style>
+    .container-fluid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    
+    .header{
+         width: 1770px;
+         height: 90px;
+         background:#7F7FD5;
+         border-radius:15px 15px 0 0;
+    }
+
+    .search{
+
+        border-radius: 50px;
+        border:0 !important;
+        size: 15%;
+        height: 50px;
+        width: 10%;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+   .search_btn{
+    margin-top: 20px;
+    height:50px;
+    width: 50px;
+    border-radius: 0 15px 15px 0 !important;
+    background-color: rgba(0,0,0,0.3) !important;
+    border:0 !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+    input[type=text] {
+        width: 40%;
+        -webkit-transition: width 0.15s ease-in-out;
+        transition: width 0.15s ease-in-out;
+        font-size: 20px;
+        color: white;
+     }
+
+     nav {
+        margin: 27px auto 0;
+      
+        position: relative;
+        width: 210px;
+        height: 50px;
+        background-color: #34495e;
+        border-radius: 8px;
+        font-size: 0;
+      }
+      nav a {
+        line-height: 50px;
+        height: 100%;
+        font-size: 15px;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        text-decoration: none;
+        text-transform: uppercase;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+      }
+      nav .animation {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        z-index: 0;
+        transition: all .5s ease 0s;
+        border-radius: 8px;
+      }
+      a:nth-child(1) {
+        width: 100px;
+      }
+      a:nth-child(2) {
+        width: 110px;
+      }
+      nav .start-home, a:nth-child(1):hover~.animation{
+        width: 100px;
+        left: 0;
+        background-color: #1abc9c;
+      }
+      nav .start-about, a:nth-child(2):hover~.animation {
+        width: 110px;
+        left: 100px;
+        background-color: #e74c3c;
+      }
+
+      .form-control{
+        background-color: white;
+      }
+
+      ul{
+        margin-top: 10px;
+      }
+
+      
+.wrapper{
+    width: 100%;
+    height: 80px;
+    background: #051923;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    position: fixed;
+  }
+  
+  .wrapper{
+    width: 100%;
+    height: 80px;
+    background-color: #051923;;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    position: fixed;
+}
+
+.wrapper ul{
+  display: flex;
+  position: relative;
+}
+
+.wrapper ul li{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.wrapper ul li a{
+  color: white;
+  display: block;
+  text-align: center; 
+}
+
+.wrapper ul li a span{
+  display: block;
+}
+
+.wrapper ul li a .icon{
+  font-size: 32px;
+  margin-bottom: 5px;
+  transition: 0.5s ease;
+}
+
+.wrapper ul li a .text{
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 1;
+  font-weight: 700;
+  transition: 0.5s ease;
+}
+
+.wrapper .pointer{
+  position: absolute;
+  bottom: 23px;
+  left: 65px;
+  width: 10px;
+  height: 10px;
+  background: #4448ff;
+  border-radius: 50%;
+  transition: 0.5s ease;
+}
+
+.wrapper ul li.active .text{
+  opacity: 0;
+}
+
+.wrapper ul li.active .icon{
+  color: #4448ff;
+}
+
+.wrapper ul li:nth-child(1).active ~ .pointer{
+  transform: translateX(0);
+}
+
+.wrapper ul li:nth-child(2).active ~ .pointer{
+  transform: translateX(100px);
+}
+
+.wrapper ul li:nth-child(3).active ~ .pointer{
+  transform: translateX(200px);
+}
+
+
+</style>
+<body>
+    <div class="container-fluid">
+        <div class="header">
+            <div class="input-group">
+                <input type="text" placeholder="Recherche" name="" class="search">
+                <div class="input-group-prepend">
+                    <span class="input-group-text search_btn"><i class="fas fa-search"></i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+    <nav>
+        <a href="#" class="active">Message</a>
+        <a href="#">Invitation</a>
+        <div class="animation start-home"></div>
+      </nav>
+    </div>
+         
+    <ul class="list-group ">
+        <!--<a href="chatbox.html">-->
+        <li class="list-group-item d-flex align-items-center ">
+            <img src="https://via.placeholder.com/50x50 " alt="Profile Picture " class="mr-3 ">
+            <div>
+                <h5 class="mb-0 ">John Doe</h5>
+                <p class="mb-0 text-muted ">Hey, comment ça va ?</p>
+                <a href="https://aide-memoire.blog-machine.info/" style="display:block;width:100%;height:100%;"></a>
+            </div>
+        </li>
+        <!--<a href="chatbox.html"></a>-->
+        <li class="list-group-item d-flex align-items-center ">
+            <img src="https://via.placeholder.com/50x50 " alt="Profile Picture " class="mr-3 ">
+            <div>
+                <h5 class="mb-0 ">Jane Smith</h5>
+                <p class="mb-0 text-muted ">Salut ! Ça roule ?</p>
+            </div>
+        </li>
+    </ul>
+    <div class="container-fluid">
+    <div class="wrapper">
+        <ul>
+          <li><a href="#">
+            <span class="icon">
+              <ion-icon name="home"></ion-icon>
+            </span>
+            <span class="text">Home</span>
+          </a></li>
+          <li class="active"><a href="#">
+            <span class="icon"><ion-icon name="chatboxes"></ion-icon></span>
+            <span class="text">Message</span>
+          </a></li>s
+          <li><a href="#">
+            <span class="icon"><ion-icon name="person"></ion-icon></span>
+            <span class="text">Profile</span>
+          </a></li>
+          <div class="pointer">
+            <div class="dot"></div>
+          </div>
+        </ul>
+    </div>
+</div>
+</body>
+<script>
+    var list_items = document.querySelectorAll(".wrapper ul li");
+    list_items.forEach(function(item){
+      item.addEventListener("click", function(){
+        list_items.forEach(function(item){
+          item.classList.remove("active");
+        });
+        item.classList.add("active");
+      });
+    })
+</script>
+</html>

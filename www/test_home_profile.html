@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>GeoTchat</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel='stylesheet' type='text/css' media='screen' href='css/profile.css'>
+</head>
+<body>
+  <main>
+   <div class="profiles">
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('images/profilephoto1.png');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Bob l'éponge <span class="profile__age">12</span></div>
+          <div class="profile__description">T'as terminé ton travail ?</div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('images/profilephoto2.png');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Andy <span class="profile__age">23</span></div>
+          <div class="profile__description">Etudiant</div>
+        </div>
+      </div>
+      <div class="profile">
+        <div class="profile__image" style="background-image: url('images/profilephoto3.png');"></div>
+        <div class="profile__infos">
+          <div class="profile__name">Rebecca <span class="profile__age">22</span></div>
+          <div class="profile__description">Salut!</div>
+        </div>
+         </div>
+        </div>
+    </div>
+    <div class="bottombar">
+      <div class="bottombar__button">
+        <img src="images/icon-next.svg">
+      </div>
+      <div class="bottombar__button">
+        <img src="images/icon-heart.svg">
+      </div>
+    </div>
+    <div class="wrapper">
+      <ul>
+        <li class="active"><a href="#">
+          <span class="icon">
+            <ion-icon name="home"></ion-icon>
+          </span>
+          <span class="text">Home</span>
+        </a></li>
+        <li><a href="#">
+          <span class="icon"><ion-icon name="search"></ion-icon></span>
+          <span class="text">Search</span>
+        </a></li>
+        <li><a href="test_msg.html">
+          <span class="icon"><ion-icon name="chatboxes"></ion-icon></span>
+          <span class="text">Message</span>
+        </a></li>
+        <li><a href="profile_user.html">
+          <span class="icon"><ion-icon name="person"></ion-icon></span>
+          <span class="text">Profile</span>
+        </a></li>
+        <li><a href="#">
+          <span class="icon"><ion-icon name="search"></ion-icon></span>
+          <span class="text">Search</span>
+        </a></li>
+        <div class="pointer">
+          <div class="dot"></div>
+        </div>
+      </ul>
+  </div>
+  
+  <script>
+      var list_items = document.querySelectorAll(".wrapper ul li");
+  list_items.forEach(function(item){
+    item.addEventListener("click", function(){
+      list_items.forEach(function(item){
+        item.classList.remove("active");
+      });
+      item.classList.add("active");
+    });
+  })
+  </script>
+  </main>
+  <script src='js/hammer.min.js'></script>
+  <script src='js/profile.js'></script>
+</body>
+</html>
